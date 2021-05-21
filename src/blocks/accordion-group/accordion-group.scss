@@ -1,0 +1,98 @@
+// В этом файле должны быть стили для БЭМ-блока aria-accordion, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.accordion-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 1rem 0;
+  margin-bottom: 80px;
+
+
+  &__accordion {
+    margin-top: -1px;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+  }
+
+  &__accordion-heading {
+    margin: 0;
+  }
+
+  &__accordion-btn {
+    font-family: 'Akrobat';
+    position: relative;
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    border-left: none;
+    border-right: none;
+    display: block;
+    font-weight: 800;
+    font-size: 24px;
+    padding: 20px 40px 20px 15px;
+    color: #000;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      margin-top: -10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 12H23' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 1V23' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: background-image $transition-time;
+
+      @media (min-width:$screen-xl) {
+        margin-top: -16px;
+        width: 45px;
+        height: 45px;
+        right: 70px;
+        background-color: $color-main;
+        border-radius: 50%;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width:$screen-xl) {
+      font-size: 24px;
+      padding: 30px 280px 30px 68px;
+    }
+  }
+
+  &__accordion-btn_expanded {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='2' viewBox='0 0 24 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1H23' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__accordion-panel {
+    border-color: #ccc;
+    padding: 20px 280px 20px 68px;
+  }
+
+  &__accordion-content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  &__accordion-btn_expanded {
+    // background-color: #bbc8d2;
+    // border-color: #ccc;
+    // border-radius: 0.3rem;
+    // border-style: solid;
+    // border-width: 0.05rem;
+  }
+}

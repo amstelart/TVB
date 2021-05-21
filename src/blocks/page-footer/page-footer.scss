@@ -1,0 +1,101 @@
+// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-footer {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__contacts {
+    background-color: #FAFAFA;
+    padding: 100px 0;
+  }
+
+  &__row {
+    @include row;
+  }
+
+  &__col {
+    @include col();
+    @include col(xl, 4);
+  }
+
+  &__title {
+    font-family: 'Akrobat';
+    font-weight: 900;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 75px;
+      height: 2px;
+      background-color: $color-main;
+      margin-top: 25px;
+    }
+  }
+
+  &__bottom {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.contact-box {
+  &__title {
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(#000, 0.5);
+    margin-bottom: 4px;
+  }
+  &__addr {
+    margin-bottom: 8px;
+  }
+  &__link {
+    font-size: 16px;
+
+    a {
+      color: #000;
+      &:hover {
+        text-decoration: none;
+        color: $color-main;
+      }
+    }
+  }
+  &__icon {
+    vertical-align: middle;
+    margin-bottom: 3px;
+  }
+  &__phone {
+    font-family: 'Akrobat';
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 8px;
+    a {
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+    }
+  }
+}
+
+.lang-toggle-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+
+  span {
+    font-family: 'Akrobat';
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  svg {
+    margin: 0 10px;
+  }
+}

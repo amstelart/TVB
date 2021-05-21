@@ -1,0 +1,108 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$gray-lighter:                hsl(0, 0%, 80%) !default;
+$gray-lightest:               hsl(0, 0%, 90%) !default;
+$text-color:                  hsl(0, 0%, 10%) !default;
+$line-height:                 1.375em;
+
+$field-padding-vertical:      0.3em !default;
+$field-padding-horizontal:    0.7em !default;
+
+$border-radius:               3px !default;
+
+.btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-family: 'Akrobat';
+  font-weight: 800;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: 0.7em 1.2em;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-align: center;
+  font-size: 20px;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-color;
+  border-radius: 0;
+  border: none;
+  background-color: $gray-lightest;
+  background-image: none;
+  cursor: pointer;
+  transition: all $transition-time;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $text-color;
+    background-color: darken($gray-lightest, 10%);
+  }
+
+  &:active,
+  &:focus {
+    @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: $opacity;
+    cursor: not-allowed;
+    color: $text-color;
+    background-color: $gray-lightest;
+    border-color: $gray-lighter;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  // &__icon {
+  //   display: inline-block;
+  //   vertical-align: middle;
+  // }
+
+
+
+  &--main {
+    color: #000;
+    background-color: $color-main;
+
+    &:hover,
+    &:focus {
+      color: #000;
+      background-color: darken($color-main, 6%);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: #000;
+      background-color: $color-main;
+      opacity: 0.8;
+    }
+  }
+
+  &--black {
+    color: #fff;
+    background-color: #000;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: lighten(#000, 10%);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: #fff;
+      background-color: #000;
+      opacity: 0.8;
+    }
+  }
+}

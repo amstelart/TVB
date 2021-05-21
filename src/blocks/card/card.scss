@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 380px;
+    flex-basis: 33.333%;
+    flex-grow: 1;
+    background-color: #FAFAFA;
+    border: 1px solid #E6E6E6;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    transition: all $transition-time;
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $color-main;
+      cursor: pointer;
+
+      .card__more {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.cards-list {
+  .card {
+    border: 1px solid #E6E6E6;
+    margin-bottom: -1px;
+  }
+}
+
+.card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 70px 60px;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: 'Akrobat';
+    font-size: 24px;
+    color: #000;
+    font-weight: 800;
+    margin-right: auto;
+  }
+
+  &__rating {
+    margin-right: 70px;
+  }
+
+  &__more {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: $color-main;
+    border-radius: 50%;
+    transition: all $transition-time;
+  }
+
+  &__more-icon {
+    position: absolute;
+    top: 16px;
+    left: 3px;
+    transform: translateX(-35%);
+    transition: transform $transition-time;
+  }
+
+  &:hover {
+    #{$block-name}__more-icon {
+      transform: translateX(45%);
+    }
+  }
+}
