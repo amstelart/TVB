@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ua">
+<head>
+  <meta charset="utf-8">
+  <title>Твоє велике будівництво</title>
+  <meta name="description" content>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <a href="index.html" class="page-header__logo logo">
+            <img class="logo__img" src="img/logo.svg" alt="Logo">
+            <div class="logo__caption" src="img/logo.svg">
+              Освітня ініціатива Національної <br>асоціації дорожників України
+            </div>
+          </a>
+          <div class="burger"><span></span></div>
+        </div>
+      </header>
+      <main role="main">
+        <div class="intro institution-intro">
+          <div class="container">
+            <div class="institution-intro__inner">
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__link"> Національний університет «Львівська політехніка» (НУ ЛП)<span></span></span></li>
+              </ul>
+              <h1 class="institution-intro__title">Національний університет «Львівська політехніка» (НУ ЛП)</h1>
+              <ul class="institution-intro__contacts">
+                <li>м. Львів, вул. Степана Бандери, 12</li>
+                <li>(032) 258-21-11</li>
+                <li><a href="#">http://lp.edu.ua</a></li>
+                <li><a href="mailto:entrance@lp.edu.ua">entrance@lp.edu.ua</a></li>
+                <li>денна, заочна</li>
+                <li>бакалавр, магістр</li>
+                <li>ЗВО (ВУЗ) заснований у 1816 р. Статус державний. IV рівень акредитації. Диплом державного зразка</li>
+              </ul>
+            </div>
+          </div>
+          <div class="institution-intro__card">
+            <img src="img/institution-photo.jpg" alt>
+            <div class="institution-intro__labels">
+              <span class="label">Безкоштовне навчання</span><br>
+              <span class="label">Платне навчання</span>
+              <span class="label">Гуртожиток</span><br>
+              <span class="label">Військова кафедра</span><br>
+              <span class="label">Післядипломна освіта</span><br>
+              <span class="label">Аспірантура, докторантура</span><br>
+              <span class="label">Пiдготовче вiддiлення</span>
+            </div>
+          </div>
+        </div>
+        <section class="ps">
+            <div class="ps__container container">
+              <h2 class="ps__title">Спеціальності</h2>
+            </div>
+            <div class="cards-grid">
+              <div class="card">
+                <div class="card__icon">
+                  <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#card-icon-04"/></svg>
+                </div>
+                <div class="card__body">
+                  <div class="card__title">Інженер відділу технічного контролю</div>
+                  <div class="card__more"><svg class="card__more-icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card__icon">
+                  <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#card-icon-05"/></svg>
+                </div>
+                <div class="card__body">
+                  <div class="card__title">Фахівець тендерного відділу</div>
+                  <div class="card__more"><svg class="card__more-icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card__icon">
+                  <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#card-icon-06"/></svg>
+                </div>
+                <div class="card__body">
+                  <div class="card__title">Диспетчер виробничої дільниці</div>
+                  <div class="card__more"><svg class="card__more-icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card__icon">
+                  <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#card-icon-07"/></svg>
+                </div>
+                <div class="card__body">
+                  <div class="card__title">Інженер-мостовик</div>
+                  <div class="card__more"><svg class="card__more-icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+                </div>
+               </div>
+               <div class="card">
+                <div class="card__icon">
+                  <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#card-icon-08"/></svg>
+                </div>
+                <div class="card__body">
+                  <div class="card__title">Інженер-дослідник в галузі будівництва</div>
+                  <div class="card__more"><svg class="card__more-icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+                </div>
+               </div>
+            </div>
+        </section>
+        <section class="reception">
+          <div class="container">
+            <div class="reception__title">Контакти Приймальної комісії</div>
+            <div class="reception__contacts">
+              <div class="reception__col">
+                <svg width="23" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#phone-icon"/></svg>
+                <ul class="reception__phones">
+                  <li>(048) 705-04-11</li>
+                  <li>(048) 705-04-13</li>
+                </ul>
+              </div>
+              <div class="reception__col">
+                <svg width="23" height="22"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#inet-icon"/></svg>
+                <ul class="reception__links">
+                  <li><a href="#">https://onat.edu.ua</a></li>
+                  <li><a href="#">https://osatrq.edu.ua</a></li>
+                  <li><a href="#">https://suitt.edu.ua</a></li>
+                  <li><a href="#">https://university.onat.edu.ua</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__contacts">
+          <div class="container">
+            <div class="page-footer__row">
+              <div class="page-footer__col">
+                <div class="page-footer__title">Наші контакти</div>
+              </div>
+              <div class="page-footer__col">
+                <div class="contact-box">
+                  <div class="contact-box__title">Адреса:</div>
+                  <div class="contact-box__addr">м. Київ, вул. Антоновича,51</div>
+                  <div class="contact-box__link">
+                    <svg class="contact-box__icon" width="8" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#social-icon-facebook"/></svg>
+                    <a href="#">Facebook</a>
+                  </div>
+                </div>
+              </div>
+              <div class="page-footer__col">
+                <div class="contact-box">
+                  <div class="contact-box__title">Телефон:</div>
+                  <div class="contact-box__phone"><a href="tel:+380973629792">+38 (097) 362-97-92</a></div>
+                  <div class="contact-box__link"><a href="mailto:office.tvb@gmail.com">office.tvb@gmail.com</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__bottom">
+          <div class="social">
+            <a href="#" target="_blank" class="social__link">
+              <svg class="social__icon" width="8" height="19"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#social-icon-facebook"/></svg>
+            </a>
+            <a href="#" target="_blank" class="social__link">
+              <svg class="social__icon" width="22" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#social-icon-youtube"/></svg>
+            </a>
+            <a href="#" target="_blank" class="social__link">
+              <svg class="social__icon" width="19" height="19"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#social-icon-instagram"/></svg>
+            </a>
+          </div>
+          <a href="#" class="lang-toggle-link"><span>UKR</span><svg class="social__icon" width="19" height="8"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#toggle-icon-right-arrow"/></svg><span>ENG</span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
