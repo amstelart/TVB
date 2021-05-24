@@ -55,7 +55,9 @@
               Освітня ініціатива Національної <br>асоціації дорожників України
             </div>
           </a>
-          <div class="burger"><span></span></div>
+          <div class="burger">
+            <img src="img/burger.svg" alt>
+          </div>
         </div>
       </header>
       <main role="main">
@@ -87,6 +89,7 @@
               </div>
             </div>
           </div>
+          <div class="intro__scroller"></div>
         </div>
         <section class="ps">
            <div class="ps__container container">
@@ -218,14 +221,10 @@
                 <div class="card__more"><svg class="card__more-icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
               </div>
              </div>
-             <div class="card card--test">
-              <div class="card__icon">
-                <svg width="70" height="70"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#card-icon-10"/></svg>
-              </div>
-              <div class="card__body">
-                <div class="card__title">Проектний менеджер</div>
-                <div class="card__more"><svg class="card__more-icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
-              </div>
+             <div class="card-test">
+               <div class="card-test__title">Не впевнені, яку професію обрати?</div>
+               <p class="card-test__sup-title">Пройдіть тест та отримайте рекомендації</p>
+               <a href="#" class="btn btn--main">Пройти тест</a>
              </div>
            </div>
         </section>
@@ -468,7 +467,13 @@
         </section>
         <section class="ps">
            <div class="ps__container container">
+            <div class="ps__title-wrap">
               <h2 class="ps__title">Новини</h2>
+              <a href="#" class="more-link">
+                <span class="more-link__text">Всі новини</span>
+                <div class="more-link__icon-wrap"><svg class="more-link__icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+              </a>
+            </div>
             </div>
             <div class="news-box">
               <a href="#" class="news-card">
@@ -519,7 +524,7 @@
                     <span class="label label--gray">7500 працівників</span>
                     <span class="label label--yellow">350 вакансій</span>
                   </div>
-                  <div class="partner-card__link"><a href="#">automagistral.com.ua</a></div>
+                  <div class="partner-card__link"><a href="#">onurgroup.com</a></div>
                 </div>
                 <div class="partner-card">
                   <div class="partner-card__logo">
@@ -529,7 +534,7 @@
                     <span class="label label--gray">7500 працівників</span>
                     <span class="label label--yellow">350 вакансій</span>
                   </div>
-                  <div class="partner-card__link"><a href="#">automagistral.com.ua</a></div>
+                  <div class="partner-card__link"><a href="#">rds.org.ua</a></div>
                 </div>
                 <div class="partner-card">
                   <div class="partner-card__logo">
@@ -539,7 +544,7 @@
                     <span class="label label--gray">7500 працівників</span>
                     <span class="label label--yellow">350 вакансій</span>
                   </div>
-                  <div class="partner-card__link"><a href="#">automagistral.com.ua</a></div>
+                  <div class="partner-card__link"><a href="#">altcom.ua</a></div>
                 </div>
                 <div class="partner-card">
                   <div class="partner-card__logo">
@@ -549,7 +554,7 @@
                     <span class="label label--gray">7500 працівників</span>
                     <span class="label label--yellow">350 вакансій</span>
                   </div>
-                  <div class="partner-card__link"><a href="#">automagistral.com.ua</a></div>
+                  <div class="partner-card__link"><a href="#">tbc.com.ua</a></div>
                 </div>
                 <div class="partner-card">
                   <div class="partner-card__logo">
@@ -559,7 +564,7 @@
                     <span class="label label--gray">7500 працівників</span>
                     <span class="label label--yellow">350 вакансій</span>
                   </div>
-                  <div class="partner-card__link"><a href="#">automagistral.com.ua</a></div>
+                  <div class="partner-card__link"><a href="#">rds.org.ua</a></div>
                 </div>
                 <div class="partner-card">
                   <div class="partner-card__logo">
@@ -569,7 +574,7 @@
                     <span class="label label--gray">7500 працівників</span>
                     <span class="label label--yellow">350 вакансій</span>
                   </div>
-                  <div class="partner-card__link"><a href="#">automagistral.com.ua</a></div>
+                  <div class="partner-card__link"><a href="#">dorogbudd.com.ua</a></div>
                 </div>
               </div>
            </div>
@@ -577,18 +582,42 @@
         <section class="ps ps--reviews">
            <div class="ps__container container">
               <h2 class="ps__title">Відгуки працівників компаній</h2>
-              <div class="review-card">
-                <div class="review-card__user">
-                  <div class="review-card__user-pic"></div>
-                  <div class="review-card__user-name">Олена Шевцова</div>
-                  <div class="review-card__user-post">Фінансовий директор</div>
-                  <div class="review-card__user-logo">
-                    <img src="img/review-card-user-logo.png" alt>
+              <div class="review__nav-group">
+                <div class="review-prev-btn"><svg class="icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+                <div class="review-next-btn"><svg class="icon" width="38" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#more-icon"/></svg></div>
+              </div>
+              <div class="review-carousel owl-carousel">
+                <div class="review-card">
+                  <div class="review-card__user">
+                    <div class="review-card__user-pic">
+                      <img src="img/user-pic-img.png" alt>
+                    </div>
+                    <div class="review-card__user-name">Олена Шевцова</div>
+                    <div class="review-card__user-post">Фінансовий директор</div>
+                    <div class="review-card__user-logo">
+                      <img src="img/review-card-user-logo.png" alt>
+                    </div>
+                  </div>
+                  <div class="review-card__body">
+                    <div class="review-card__title">Ми інвестуємо не тільки в нові технології та обладнання, а й в молодих, талановитих фахівців, співпрацюючи з провідними навчальними закладами.</div>
+                    <div class="review-card__text">У нас працює згуртована команда професіоналів — 4000 співробітників. Ми інвестуємо не тільки в нові технології та обладнання, а й в молодих, талановитих фахівців, співпрацюючи з провідними навчальними закладами. В Україні бренд «Автомагістраль-Південь» міцно асоціюється з гарантією якості та надійності. Ми першими вийшли на ринок дорожніх робіт сусідніх країн і вже отримали визнання на міжнародному рівні.</div>
                   </div>
                 </div>
-                <div class="review-card__body">
-                  <div class="review-card__title">Ми інвестуємо не тільки в нові технології та обладнання, а й в молодих, талановитих фахівців, співпрацюючи з провідними навчальними закладами.</div>
-                  <div class="review-card__text">У нас працює згуртована команда професіоналів — 4000 співробітників. Ми інвестуємо не тільки в нові технології та обладнання, а й в молодих, талановитих фахівців, співпрацюючи з провідними навчальними закладами. В Україні бренд «Автомагістраль-Південь» міцно асоціюється з гарантією якості та надійності. Ми першими вийшли на ринок дорожніх робіт сусідніх країн і вже отримали визнання на міжнародному рівні.</div>
+                <div class="review-card">
+                  <div class="review-card__user">
+                    <div class="review-card__user-pic">
+                      <img src="img/user-pic-img.png" alt>
+                    </div>
+                    <div class="review-card__user-name">Олена Шевцова</div>
+                    <div class="review-card__user-post">Фінансовий директор</div>
+                    <div class="review-card__user-logo">
+                      <img src="img/review-card-user-logo.png" alt>
+                    </div>
+                  </div>
+                  <div class="review-card__body">
+                    <div class="review-card__title">Ми інвестуємо не тільки в нові технології та обладнання, а й в молодих, талановитих фахівців, співпрацюючи з провідними навчальними закладами.</div>
+                    <div class="review-card__text">У нас працює згуртована команда професіоналів — 4000 співробітників. Ми інвестуємо не тільки в нові технології та обладнання, а й в молодих, талановитих фахівців, співпрацюючи з провідними навчальними закладами. В Україні бренд «Автомагістраль-Південь» міцно асоціюється з гарантією якості та надійності. Ми першими вийшли на ринок дорожніх робіт сусідніх країн і вже отримали визнання на міжнародному рівні.</div>
+                  </div>
                 </div>
               </div>
            </div>
