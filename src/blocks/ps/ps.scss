@@ -8,6 +8,18 @@
 
   padding-top: 145px;
 
+  &__title-wrap {
+    display: flex;
+    align-items: flex-end;
+
+    #{$block-name}__title {
+      margin-right: auto;
+    }
+    .more-link {
+      margin-bottom: 65px;
+    }
+  }
+
   &__title {
     font-family: 'Akrobat';
     font-weight: 900;
@@ -15,6 +27,7 @@
     color: #000;
     text-transform: uppercase;
     margin-top: 0;
+    margin-bottom: 60px;
     max-width: 810px;
     line-height: 1;
 
@@ -36,6 +49,10 @@
     background-color: $color-main;
     padding-bottom: 128px;
 
+    background-image: url(../img/map-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
     #{$block-name}__title {
       &:before {
         background-color: #fff;
@@ -53,4 +70,10 @@
     background-repeat: no-repeat;
     background-position: bottom center;
   }
+}
+
+
+.ps-tuition {
+  background: #EDEDED;
+  padding-bottom: 145px;
 }

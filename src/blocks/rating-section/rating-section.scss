@@ -1,0 +1,82 @@
+// В этом файле должны быть стили для БЭМ-блока rating-section, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.rating-section {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__top {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #444;
+    padding: 100px 0 80px 0;
+  }
+
+  &__title {
+    font-family: 'Akrobat';
+    text-transform: uppercase;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 25px;
+    span {
+      color: $color-main;
+    }
+  }
+
+  &__caption {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.4;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+        color: $color-main;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 90px 0 40px 0;
+  }
+
+  &__group {
+    @include row;
+  }
+  &__item {
+    @include col();
+    @include col(xs, 4);
+    margin-bottom: 80px;
+
+    .label {
+      margin-bottom: 20px;
+      font-family: 'Akrobat';
+      font-weight: 500;
+      text-transform: inherit;
+      font-size: 20px;
+    }
+  }
+
+  &__item-rate {
+    display: flex;
+    align-items: center;
+
+    .live-rating {
+      font-family: 'Akrobat';
+      color: #000;
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 1;
+      margin-left: 25px;
+    }
+  }
+}

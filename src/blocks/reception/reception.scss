@@ -8,6 +8,10 @@
 
   padding: 80px 0;
   background-color: #EDEDED;
+  background-image: url(../img/hat-bg.png);
+  background-repeat: no-repeat;
+  background-position: right 90px top -100px;
+  background-size: 500px 496px;
 
   &__contacts {
     display: flex;

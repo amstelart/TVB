@@ -31,6 +31,10 @@
       }
     }
   }
+
+  .card-test {
+    flex-basis: 66.666%;
+  }
 }
 
 .cards-list {
@@ -85,5 +89,35 @@
     #{$block-name}__more-icon {
       transform: translateX(45%);
     }
+  }
+}
+
+.card-test {
+  background: #EDEDED;
+  padding: 90px 108px;
+  background-image: url(../img/hat-bg.png);
+  background-repeat: no-repeat;
+  background-position: right top -100px;
+  background-size: 500px 496px;
+
+  &__title {
+    font-family: 'Akrobat';
+    font-weight: 900;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 75px;
+      height: 2px;
+      background-color: $color-main;
+      margin-top: 25px;
+    }
+  }
+  &__sup-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 45px;
   }
 }

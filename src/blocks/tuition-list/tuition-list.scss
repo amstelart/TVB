@@ -1,0 +1,55 @@
+// В этом файле должны быть стили для БЭМ-блока tuition-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tuition-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__item {
+    display: flex;
+    padding: 40px 60px 35px 60px;
+    background-color: #fff;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #EDEDED;
+    }
+  }
+  &__body {
+    flex-grow: 1;
+  }
+  &__logo {
+    flex-shrink: 0;
+    align-self: center;
+  }
+  &__title {
+    font-family: 'Akrobat';
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  &__contacts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+
+    li {
+      position: relative;
+      margin-bottom: 14px;
+      padding: 6px 0 6px 42px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .icon {
+        fill: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}

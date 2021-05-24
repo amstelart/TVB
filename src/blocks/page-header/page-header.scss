@@ -8,10 +8,20 @@
 
   padding: 13px 0;
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
 
   &__inner {
     display: flex;
     align-items: center;
+    width: 1820px;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   &__logo {
