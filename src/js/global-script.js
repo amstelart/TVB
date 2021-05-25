@@ -29,12 +29,23 @@ $( document ).ready(function() {
   $('.review-prev-btn').click(function() {
       owl.trigger('prev.owl.carousel', [600]);
   })
+
+  $('.map-holder area').on('mouseenter', function (e) {
+    e.preventDefault();
+    selector = $(this).attr('data-region');
+    $(selector).addClass('is-active');
+  });
+  $('.map-holder area').on('mouseleave', function (e) {
+      $('.mapRegion').removeClass('is-active');
+  });
 });
 
 // Изоляция без jQuery
 // (function(){
 //   // code
 // }());
+
+
 
 // На проекте нет jQuery, но хочется $( document ).ready...
 // function ready(fn) {

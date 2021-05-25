@@ -1,0 +1,70 @@
+// В этом файле должны быть стили для БЭМ-блока map-holder, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.map-holder {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+
+  &__hovers {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    img {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    width: inherit;
+    height: inherit;
+    max-width: 1230px;
+    opacity: 0;
+  }
+
+  .mapRegion {
+    position: absolute;
+
+    &.is-active {
+      .mapRegion__img {
+        opacity: 1;
+      }
+    }
+  }
+
+  .mapRegion__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+  .mapRegion__title {
+    font-size: 18px;
+    font-weight: 300;
+    white-space: nowrap;
+    position: absolute;
+    padding-top: 60px;
+  }
+  .mapRegion__count {
+    width: 50px;
+    height: 50px;
+    background-color: $color-main;
+    border-radius: 50%;
+    font-family: 'Akrobat';
+    font-weight: 800;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

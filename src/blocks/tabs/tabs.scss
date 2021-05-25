@@ -33,18 +33,12 @@ $field-padding-horizontal:    0.7em !default;
     .no-js & {
       display: none;
     }
-
-    &:after {
-      content: '';
-      flex-grow: 1;
-      height: 1px;
-      background-color: $border-color;
-    }
   }
 
   &__link-wrap {
     position: relative;
-    border: 1px solid $border-color;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    width: 195px;
 
     &:not(:last-child) {
       border-right: none;
@@ -52,30 +46,28 @@ $field-padding-horizontal:    0.7em !default;
 
     &--active {
 
+      border-color: #fff;
+
       #{$block-name}__link {
-        color: $text-color;
-        background-color: #fff;
+        color: #000;
       }
     }
   }
 
   &__link {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    color: $text-color--muted;
+    padding: 18px 24px;
+    color: #000;
     text-decoration: none;
-    background-color: $gray-lightest;
-
-    &:hover,
-    &:focus {
-      color: $text-color--muted;
-    }
+    font-family: 'Akrobat';
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
   }
 
   &__content-wrapper {
     display: block;
-    padding: $field-padding-vertical $field-padding-horizontal;
-    border: 1px solid $border-color;
+    padding: 40px 0 0 0;
     border-top: none;
   }
 
@@ -89,6 +81,43 @@ $field-padding-horizontal:    0.7em !default;
 
       .js & {
         display: block;
+      }
+    }
+  }
+
+  &--profession {
+    position: absolute;
+    top: 0;right: 0;
+
+    .dropdown {
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .dropdown__toggler {
+      width: 390px;
+      text-align: left;
+      font-weight: 300;
+      font-size: 18px;
+      text-transform: inherit;
+      background-color: #fff;
+      padding: 15px 25px;
+
+      background-image: url(../img/dropdown-icon.svg);
+      background-position: right 20px center;
+      background-repeat: no-repeat;
+    }
+    .dropdown__menu {
+      width: 100%;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+      font-weight: 300;
+      font-size: 18px;
+      padding: 25px 0;
+
+      .menu__item:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      .menu__link {
+        padding: 5px 25px;
       }
     }
   }
