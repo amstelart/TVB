@@ -16,10 +16,12 @@ $border-radius:               3px !default;
 
   display: inline-block;
   position: relative;
+  font-family: 'Akrobat';
+  font-weight: 500;
   margin: 0 0.1em;
   vertical-align: baseline;
   line-height: 1;
-  padding: 0.2em 0.4em 0.25em;
+  padding: 0.25em 0.4em 0.35em;
   background-color: #000;
   color: #fff;
   text-decoration: none;
@@ -40,5 +42,15 @@ $border-radius:               3px !default;
   &--gray {
     background-color: #D9D9D9;
     color: #000;
+  }
+
+  &--icon {
+    padding-right: 34px;
+
+    svg {
+      position: absolute;
+      right: 8px;
+      top: 7px;
+    }
   }
 }

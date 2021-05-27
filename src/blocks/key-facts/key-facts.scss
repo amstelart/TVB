@@ -7,19 +7,13 @@
   $block-name:                &; // #{$block-name}__element
 
   &__group {
-    display: flex;
+    @include row;
     margin-bottom: 70px;
-
-    &:last-child {
-      margin-left: 415px;
-      justify-content: space-between;
-    }
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    margin-right: 51px;
+    @include col();
+    @include col(xs, 3);
   }
 
   &__num {
@@ -28,7 +22,7 @@
     font-weight: 800;
     font-size: 112px;
     line-height: 1;
-    margin-right: 25px;
+    margin-bottom: 10px;
   }
 
   &__caption {
